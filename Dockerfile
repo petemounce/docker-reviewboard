@@ -16,7 +16,7 @@ RUN set -ex; \
     if [ "${RB_VERSION}" ]; then RB_VERSION="==${RB_VERSION}"; fi; \
     python -m virtualenv --system-site-packages /opt/venv; \
     . /opt/venv/bin/activate; \
-    pip install "ReviewBoard${RB_VERSION}" django-storages==1.1.8 oauthlib==1.0.1 semver; \
+    pip install "ReviewBoard${RB_VERSION}" django-storages==1.1.8 oauthlib==1.0.1 semver p4python; \
     rm -rf /root/.cache
 
 ENV PATH="/opt/venv/bin:${PATH}"
